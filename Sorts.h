@@ -1,5 +1,7 @@
 #pragma once
 
+/// свое пространство имен
+/// swap, *
 template<typename Type>
 void Swaper(Type &first, Type &last) {
     Type temp = first;
@@ -80,6 +82,8 @@ void MergeSort(Type first, Type last) {
     }
 }
 
+/// pivot 
+/// type -> it
 template<class Type>
 Type FindAHassle(Type first, Type last) {
     first--;
