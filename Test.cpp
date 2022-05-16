@@ -76,90 +76,112 @@ TEST(CorrectnessTest, QuickSortForList) {
     ASSERT_EQ(my_list, std::list<int>({1, 2, 3, 4, 5, 6, 7, 8, 9}));
 }
 
-TEST_F(SortTest, TimerOfInsertionSort) {
-    Timer timer("InsertionSort");
-    timer.start();
-    InsertionSort(arr_10.begin(), arr_10.end());
-    timer.stop("arr_10");
-    timer.start();
-    InsertionSort(arr_100.begin(), arr_100.end());
-    timer.stop("arr_100");
-    timer.start();
-    InsertionSort(arr_1000.begin(), arr_1000.end());
-    timer.stop("arr_1000");
-    timer.start();
-    InsertionSort(arr_10000.begin(), arr_10000.end());
-    timer.stop("arr_10000");
-    timer.start();
-    InsertionSort(arr_100000.begin(), arr_100000.end());
-    timer.stop("arr_100000");
-    timer.start();
-    InsertionSort(arr_250000.begin(), arr_250000.end());
-    timer.stop("arr_250000");
-}
+//TEST_F(SortTest, TimerOfInsertionSort) {
+//    Timer timer("InsertionSort");
+//    timer.start();
+//    InsertionSort(arr_10.begin(), arr_10.end());
+//    timer.stop("arr_10");
+//    timer.start();
+//    InsertionSort(arr_100.begin(), arr_100.end());
+//    timer.stop("arr_100");
+//    timer.start();
+//    InsertionSort(arr_1000.begin(), arr_1000.end());
+//    timer.stop("arr_1000");
+//    timer.start();
+//    InsertionSort(arr_10000.begin(), arr_10000.end());
+//    timer.stop("arr_10000");
+//    timer.start();
+//    InsertionSort(arr_100000.begin(), arr_100000.end());
+//    timer.stop("arr_100000");
+//    timer.start();
+//    InsertionSort(arr_250000.begin(), arr_250000.end());
+//    timer.stop("arr_250000");
+//}
+//
+//TEST_F(SortTest, TimerOfBubbleSort) {
+//    Timer timer("BubbleSort");
+//    timer.start();
+//    BubbleSort(arr_10.begin(), arr_10.end());
+//    timer.stop("arr_10");
+//    timer.start();
+//    BubbleSort(arr_100.begin(), arr_100.end());
+//    timer.stop("arr_100");
+//    timer.start();
+//    BubbleSort(arr_1000.begin(), arr_1000.end());
+//    timer.stop("arr_1000");
+//    timer.start();
+//    BubbleSort(arr_10000.begin(), arr_10000.end());
+//    timer.stop("arr_10000");
+//    timer.start();
+//    BubbleSort(arr_100000.begin(), arr_100000.end());
+//    timer.stop("arr_100000");
+//    timer.start();
+//    BubbleSort(arr_250000.begin(), arr_250000.end());
+//    timer.stop("arr_250000");
+//}
+//
+//TEST_F(SortTest, TimerOfMergeSort) {
+//    Timer timer("MergeSort");
+//    timer.start();
+//    MergeSort(arr_10.begin(), arr_10.end());
+//    timer.stop("arr_10");
+//    timer.start();
+//    MergeSort(arr_100.begin(), arr_100.end());
+//    timer.stop("arr_100");
+//    timer.start();
+//    MergeSort(arr_1000.begin(), arr_1000.end());
+//    timer.stop("arr_1000");
+//    timer.start();
+//    MergeSort(arr_10000.begin(), arr_10000.end());
+//    timer.stop("arr_10000");
+//    timer.start();
+//    MergeSort(arr_100000.begin(), arr_100000.end());
+//    timer.stop("arr_100000");
+//    timer.start();
+//    MergeSort(arr_250000.begin(), arr_250000.end());
+//    timer.stop("arr_250000");
+//}
+//
+//TEST_F(SortTest, TimerOfQuickSort) {
+//    Timer timer("QuickSort");
+//    timer.start();
+//    QuickSort(arr_10.begin(), arr_10.end());
+//    timer.stop("arr_10");
+//    timer.start();
+//    QuickSort(arr_100.begin(), arr_100.end());
+//    timer.stop("arr_100");
+//    timer.start();
+//    QuickSort(arr_1000.begin(), arr_1000.end());
+//    timer.stop("arr_1000");
+//    timer.start();
+//    QuickSort(arr_10000.begin(), arr_10000.end());
+//    timer.stop("arr_10000");
+//    timer.start();
+//    QuickSort(arr_100000.begin(), arr_100000.end());
+//    timer.stop("arr_100000");
+//    timer.start();
+//    QuickSort(arr_250000.begin(), arr_250000.end());
+//    timer.stop("arr_250000");
+//}
 
-TEST_F(SortTest, TimerOfBubbleSort) {
-    Timer timer("BubbleSort");
+TEST_F(SortTest, TimerOfStdSort) {
+    Timer timer("STDSORT");
     timer.start();
-    BubbleSort(arr_10.begin(), arr_10.end());
+    std::sort(arr_10.begin(), arr_10.end());
     timer.stop("arr_10");
     timer.start();
-    BubbleSort(arr_100.begin(), arr_100.end());
+    std::sort(arr_100.begin(), arr_100.end());
     timer.stop("arr_100");
     timer.start();
-    BubbleSort(arr_1000.begin(), arr_1000.end());
+    std::sort(arr_1000.begin(), arr_1000.end());
     timer.stop("arr_1000");
     timer.start();
-    BubbleSort(arr_10000.begin(), arr_10000.end());
+    std::sort(arr_10000.begin(), arr_10000.end());
     timer.stop("arr_10000");
     timer.start();
-    BubbleSort(arr_100000.begin(), arr_100000.end());
+    std::sort(arr_100000.begin(), arr_100000.end());
     timer.stop("arr_100000");
     timer.start();
-    BubbleSort(arr_250000.begin(), arr_250000.end());
-    timer.stop("arr_250000");
-}
-
-TEST_F(SortTest, TimerOfMergeSort) {
-    Timer timer("MergeSort");
-    timer.start();
-    MergeSort(arr_10.begin(), arr_10.end());
-    timer.stop("arr_10");
-    timer.start();
-    MergeSort(arr_100.begin(), arr_100.end());
-    timer.stop("arr_100");
-    timer.start();
-    MergeSort(arr_1000.begin(), arr_1000.end());
-    timer.stop("arr_1000");
-    timer.start();
-    MergeSort(arr_10000.begin(), arr_10000.end());
-    timer.stop("arr_10000");
-    timer.start();
-    MergeSort(arr_100000.begin(), arr_100000.end());
-    timer.stop("arr_100000");
-    timer.start();
-    MergeSort(arr_250000.begin(), arr_250000.end());
-    timer.stop("arr_250000");
-}
-
-TEST_F(SortTest, TimerOfQuickSort) {
-    Timer timer("QuickSort");
-    timer.start();
-    QuickSort(arr_10.begin(), arr_10.end());
-    timer.stop("arr_10");
-    timer.start();
-    QuickSort(arr_100.begin(), arr_100.end());
-    timer.stop("arr_100");
-    timer.start();
-    QuickSort(arr_1000.begin(), arr_1000.end());
-    timer.stop("arr_1000");
-    timer.start();
-    QuickSort(arr_10000.begin(), arr_10000.end());
-    timer.stop("arr_10000");
-    timer.start();
-    QuickSort(arr_100000.begin(), arr_100000.end());
-    timer.stop("arr_100000");
-    timer.start();
-    QuickSort(arr_250000.begin(), arr_250000.end());
+    std::sort(arr_250000.begin(), arr_250000.end());
     timer.stop("arr_250000");
 }
